@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()">
+    <div style="max-width: 600px; border-radius: 10px;padding: 20px; margin: 10px;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;;" class="mx-auto p2">
+        <div class="mb-3 ">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" [(ngModel)]="title" name="title" id="title"
+                aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <input type="text" class="form-control" [(ngModel)]="desc" name="desc" id="desc">
+        </div>
+        <button type="submit" class="btn btn-primary"> Add</button>
+    </div>
+</form>

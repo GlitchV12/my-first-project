@@ -1,0 +1,10 @@
+<app-add-todos (todoAdd)="addTodo($event)"></app-add-todos>
+<div class="container" *ngIf="this.todos.length === 0; else showTodo" style=" margin-top: 5%;">
+    <div style="text-align: center;" class="mx-auto p2">no todos found</div>
+</div>
+
+<ng-template #showTodo >
+    <div *ngFor="let todo of todos; index as i">
+        <app-todo-items [i]="i" [todo]="todo" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-items>
+    </div>
+</ng-template>
